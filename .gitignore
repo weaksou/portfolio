@@ -1,3 +1,7 @@
-assets/
-assets/images
-assets/audio
+assets
+node_modules
+webtemplatexd.xd
+.parcel-cache
+dist
+package-lock.json
+package.json
