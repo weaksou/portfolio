@@ -132,7 +132,6 @@ function addClassToOutline(className) {
         const viewerClassList = viewer.classList;
 
         if(viewerClassList.contains("is-visible")){
-            console.log(event.target);
             if(event.target === viewer){
                  mainViewer.classList.remove("is-visible");
             }
