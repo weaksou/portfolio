@@ -150,3 +150,5 @@ function openDropDown() {
     sectionTeam.classList.toggle("height80");
     featherPlusIcon.classList.toggle("fe-rotate");
 }
+console.clear();
+console.log("%cIn this world, wherever there is light - there are also shadows.", "background: rgb(0,16,27); background: linear-gradient(0deg, rgba(0,16,27,1) 0%, rgba(14,18,32,1) 37%, rgba(203,48,96,1) 70%); color:white; font-size:18px; padding:2px 4px; border-radius:5px;")
