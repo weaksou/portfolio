@@ -1,6 +1,3 @@
-function onLoad() {
-    document.getElementById('loader').style.display = 'none'
-}
 const skills = document.querySelector("#skills");
 const skillDescriptions = skills.querySelectorAll(".skill-description");
 const descriptionContent = [
