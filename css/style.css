@@ -116,10 +116,6 @@ body {
     }
 .main-header .profile-image img{
     height: 200px;
-    position: absolute;
-    top: 0;
-    left:-45%;
-    z-index: 0;
 }
 .main-header .description {
   margin: 10px auto;
