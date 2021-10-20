@@ -152,3 +152,14 @@ function openDropDown() {
 }
 console.clear();
 console.log("%cIn this world, wherever there is light - there are also shadows.", "background: rgb(0,16,27); background: linear-gradient(0deg, rgba(0,16,27,1) 0%, rgba(14,18,32,1) 37%, rgba(203,48,96,1) 70%); color:white; font-size:18px; padding:2px 4px; border-radius:5px;")
+
+
+
+window.addEventListener("load", ()=>{
+    const profileImage = document.getElementById("profileImage");    
+    setTimeout(() => {
+        profileImage.innerHTML = '<img src="../assets/images/profiledoomer.jpg" alt="weaksou">';
+    }, 1000);
+
+
+})
