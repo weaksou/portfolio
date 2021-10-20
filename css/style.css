@@ -55,7 +55,7 @@ html{
 
 body {
   background-color: #f9f9f9;
-  background-image: url("/assets/images/background.jpg");
+  background-image: url("../assets/images/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -71,7 +71,7 @@ body {
 .main-header {
   min-height: 250px;
   background-color: #fff;
-  background-image: url("/assets/images/headersvg.svg");
+  background-image: url("../assets/images/headersvg.svg");
   background-size: cover;
   background-repeat: no-repeat;
   font-size: 22px;
@@ -415,13 +415,13 @@ body {
   background-size: cover;
 }
 .html-vw-bg{
-  background-image: url("/assets/images/viewerhtml.svg");
+  background-image: url("../assets/images/viewerhtml.svg");
 }
 .css-vw-bg{
-  background-image: url("/assets/images/viewercss.svg");
+  background-image: url("../assets/images/viewercss.svg");
 }
 .js-vw-bg{
-  background-image: url("/assets/images/viewerjs.svg");
+  background-image: url("../assets/images/viewerjs.svg");
 }
 
 .viewer-image svg{
