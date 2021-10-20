@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body onload="document.getElementById('loader').style.display = 'none'">
+<body onload="onLoad()">
     <div class="lc" id="loader">
         <div class="loader">
     </div>
@@ -46,9 +46,9 @@
                     </div>
                     <div class="skill-title">The web structure</div>
                     <div class="skill-description">
-                        I can consider myself good at HTML, it was the first language I've ever learned, the first code file that I didn't understand a word of it, but It gave me doubt how does this work? and then I started asking questions. I didn't know to google help back then, and after a lot of questions, I started learning how to code at the beginning of 2016, but anyway it made me what I am today. we cannot deny facts <span class="emojie">😀</span>
+                        I can consider myself good at HTML, it was the first language I've ever learned, the first code file that I didn't understand a word of it, but It gave me doubt how does this work? and then I started asking questions. I didn't know to google help back then, and after a lot of questions, I started learning how to code at the beginning of 2016, but anyway, it made me what I am today. we cannot deny facts <span class="emojie">😀</span>
                     </div>
-                    <div class="skill-learn-more" data-content="html">
+                    <div class="skill-learn-more">
                         <a href="#skills" class="link" data-content="html">Read more </a>
                         <span class="link-arrow link">
                              <svg class="feather">
@@ -74,7 +74,7 @@
                         I spend a whole month coding a blog with a control panel and customizing it with icons... until I realized that there was something called responsive:)))), I was 14yo so excuse me 😎 !
                          the only young guy In my city that was hacking NASA with HTML, that's how they see me, a pop star.                   
                     </div>
-                    <div class="skill-learn-more" data-content="css">
+                    <div class="skill-learn-more">
                         <a href="#skills" class="link" data-content="css">Read more </a>
                         <span class="link-arrow link">
                              <svg class="feather">
@@ -97,10 +97,10 @@
                     </div>
                     <div class="skill-title">The boss</div>
                     <div class="skill-description">
-                        javascript, my enemy! I fear it. whenever I hear this name I think of someone to save me, jQuery? Bootstrap... I didn't know anyone back then. I had to face the truth, I don't understand the syntax, why do I need to write all of this to toggle a button? why I can't make a game with javascript why? Nah, it was my fault nobody build a game in his first time learning a language, right? I didn't give up I kept fighting, stealing images from other games, sounds. "how to add voices to a game" 😳.. oops I forgot "javascript". it was too late I saw the unity engine logo, I was so excited that I felt cold when started learning how to make games. but my happiness didn't last for too long my little brother broke my pc and I stopped learning 
+                        javascript, my enemy! I fear it. whenever I hear this name I think of someone to save me, jQuery? Bootstrap... I didn't know anyone back then. I had to face the truth, I don't understand the syntax, why do I need to write all of this to toggle a button? why I can't make a game with javascript why? Nah, it was my fault nobody built a game in his first time learning a language, right? I didn't give up I kept fighting, stealing images from other games, sounds. "how to add voices to a game" 😳.. oops I forgot "javascript". it was too late I saw the unity engine logo, I was so excited that I felt cold when started learning how to make games. but my happiness didn't last for too long my little brother broke my pc and I stopped learning 
                         "6 years later" I bought I new laptop, I started learning again, HTML- CSS- js. it looks familiar, what could I've become if my laptop didn't get broken. shame on you Luck!                    
                     </div>
-                    <div class="skill-learn-more" data-content="javascript">
+                    <div class="skill-learn-more">
                         <a href="#skills" class="link" data-content="javascript">Read more</a>
                         <span class="link-arrow link">
                             <svg class="feather">
@@ -132,14 +132,14 @@
         <section class="footer" id="credits">
             <div class="info">
                 <span class="creator"><span class="badge">Weaksou 🤦‍♂️</span></span>
-                <div class="section-team">
-                    <div class="info-title-bottom">
-                        Credits go to 
-                        <svg class="feather">
-                            <use href="./assets/icons/feather-sprite.svg#alert-circle"/>
+                <div class="section-team" id="sectionTeam">
+                    <div class="info-title-bottom" id="creditDropDown">
+                        people who are the reason I started coding again
+                        <svg class="feather" id="featherPlusIcon">
+                            <use href="./assets/icons/feather-sprite.svg#plus"/>
                         </svg>
                     </div>
-                <div class="myteam">
+                <div class="myteam" id="teamCredits">
                     <ul>
                         <li><a class="badge" href="#credits">Rivotril</a></li>
                         <li><a class="badge" href="#credits">Mish_v</a></li>

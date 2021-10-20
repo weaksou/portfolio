@@ -1,9 +1,12 @@
+function onLoad() {
+    document.getElementById('loader').style.display = 'none'
+}
 const skills = document.querySelector("#skills");
 const skillDescriptions = skills.querySelectorAll(".skill-description");
 const descriptionContent = [
-    `I can consider myself good at HTML, it was the first language I've ever learned, the first code file that I didn't understand a word of it, but It gave me doubt how does this work? and then I started asking questions. I didn't know to google help back then, and after a lot of questions, I started learning how to code at the beginning of 2016, but anyway it made me what I am today. we cannot deny facts <span class="emojie">😀</span>`,
+    `I can consider myself good at HTML, it was the first language I've ever learned, the first code file that I didn't understand a word of it, but It gave me doubt how does this work? and then I started asking questions. I didn't know to google help back then, and after a lot of questions, I started learning how to code at the beginning of 2016, but anyway, it made me what I am today. we cannot deny facts <span class="emojie">😀</span>`,
     `and then we need a more efficient way to style things, a tool that will allow us to style things without the inline mumbo jumbo!. CSS, isn't it? yeah... I spend a whole month coding a blog with a control panel and customizing it with icons... until I realized that there was something called responsive:)))), I was 14yo so excuse me 😎 ! the only young guy In my city that was hacking NASA with HTML, that's how they see me, a pop star.`,
-    `javascript, my enemy! I fear it. whenever I hear this name I think of someone to save me, jQuery? Bootstrap... I didn't know anyone back then. I had to face the truth, I don't understand the syntax, why do I need to write all of this to toggle a button? why I can't make a game with javascript why? Nah, it was my fault nobody build a game in his first time learning a language, right? I didn't give up I kept fighting, stealing images from other games, sounds. "how to add voices to a game" 😳.. oops I forgot "javascript". it was too late I saw the unity engine logo, I was so excited that I felt cold when started learning how to make games. but my happiness didn't last for too long my little brother broke my pc and I stopped learning "6 years later" I bought I new laptop, I started learning again, HTML- CSS- js. it looks familiar, what could I've become if my laptop didn't get broken. shame on you Luck!`
+    `javascript, my enemy! I fear it. whenever I hear this name I think of someone to save me, jQuery? Bootstrap... I didn't know anyone back then. I had to face the truth, I don't understand the syntax, why do I need to write all of this to toggle a button? why I can't make a game with javascript why? Nah, it was my fault nobody built a game in his first time learning a language, right? I didn't give up I kept fighting, stealing images from other games, sounds. "how to add voices to a game" 😳.. oops I forgot "javascript". it was too late I saw the unity engine logo, I was so excited that I felt cold when started learning how to make games. but my happiness didn't last for too long my little brother broke my pc and I stopped learning "6 years later" I bought I new laptop, I started learning again, HTML- CSS- js. it looks familiar, what could I've become if my laptop didn't get broken. shame on you Luck!`
 ];
 const descTitles = [
     'The web structure',
@@ -54,7 +57,7 @@ window.addEventListener("keydown", (event)=>{
 
 
 //open clicked field
-const skillLearnMore = document.querySelectorAll(".skill-learn-more");
+const skillLearnMore = document.querySelectorAll(".skill-learn-more a");
 const viewerContent = document.querySelector("#viewerContent");
 const mainvcontainer = mainViewer.querySelector(".main-v-container");
 const skillImage = skills.querySelectorAll(".skill-image");
@@ -138,3 +141,15 @@ function addClassToOutline(className) {
         }
         
     });
+
+
+//credits dropdown
+const creditDropDown = document.getElementById("creditDropDown");
+const sectionTeam = document.getElementById("sectionTeam");
+const featherPlusIcon = document.getElementById("featherPlusIcon");
+creditDropDown.addEventListener("click", openDropDown);
+function openDropDown() {
+    creditDropDown.classList.toggle("dropdownborder");
+    sectionTeam.classList.toggle("height80");
+    featherPlusIcon.classList.toggle("fe-rotate");
+}
