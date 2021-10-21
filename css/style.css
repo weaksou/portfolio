@@ -7,6 +7,7 @@
 html{
     width: 100%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 .lc{
   background-color: #040c18;
@@ -66,7 +67,7 @@ body {
 .main-container {
   width: 100%;
   height: 100vh;
-  text-align: center;
+  text-align: center;  
 }
 .main-header {
   min-height: 250px;
@@ -432,29 +433,13 @@ body {
 }
 
 .is-visible{
-  visibility: visible;
-  opacity: 1;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 .italic{
   font-style: italic;
 }
 
-/* width of scrollbar */
-.viewer-content::-webkit-scrollbar {
-  width: 5px;
-}
-/* Track background*/
-.viewer-content::-webkit-scrollbar-track {
-  background: #e5e1ec;
-}
-.viewer-content::-webkit-scrollbar-thumb {
-  /* the handle you use to scroll */
-  background: #6f2ef3;
-}
-.viewer-content::-webkit-scrollbar-thumb:hover {
-  /* Handle on hover */
-  background: #5d26cc;
-}
 
 /* //more details part starts here */
 .more-details{
@@ -482,12 +467,13 @@ body {
 /* //footer starts here */
 .footer{
     width: 100%;
-    height: 200px;
+    height: 350px;
     display: grid;
     place-items: center;
-    background-color: #fff;
+    background-color: #00101c;
     overflow: hidden;
     position: relative;
+    padding: 30px;
 }
 .footer .footerbg{
     min-height: 100%;
@@ -499,32 +485,64 @@ body {
     position: relative;
     z-index: 1;
     color: white;
-    height: 80px;
+    height: 100%;
 }
 .footer .info ul li{
     list-style-type: none;
     display: inline-block;
+
 }
 .myteam{
     width: 100%;
     display: flex;
     align-items: center;
-    margin-top: 8px;
+    margin-top: 2px;
     overflow: hidden;
-    height: 40px;
     justify-content: center;
+    padding: 5px;
 }
 .footer .creator .badge{
   display: inline-block;
   margin-bottom: 10px;
+  cursor: pointer;
+  user-select: none;
 }
 .footer .info .myteam ul li a{
-    margin-top: 10px;
     margin: 5px;
+    display: flex;
+    align-items: center;
 }
+.facebook, .facebook *{
+  color: #0676e8 !important; 
+}
+.facebook:focus{
+  outline: 3px solid #0676e8 !important;
+}
+.facebook:hover{
+  background-image: linear-gradient(rgba(29, 81, 223, 0.153), rgba(29, 81, 223, 0.153)) !important;
+}
+.twitter, .twitter *{
+ color: #1d9bf0 !important; 
+}
+.twitter:focus{
+  outline: 3px solid #1d9bf0 !important;
+}
+.twitter:hover{
+  background-image: linear-gradient(rgba(42, 122, 185, 0.153), rgba(42, 122, 185, 0.153)) !important;
+}
+.stackofv, .stackofv *{
+ color: #f48023 !important; 
+}
+.stackofv:focus{
+  outline: 3px solid #f48023 !important;
+}
+.stackofv:hover{
+  background-image: linear-gradient(rgba(206, 73, 33, 0.153), rgba(206, 73, 33, 0.153)) !important;
+}
+
 .footer .info-title-bottom{
     width: 100%;
-    height: 30px;
+    min-height: 30px;
     text-align: center;
     font-size: 20px;
     padding: 2px 10px;
@@ -532,7 +550,9 @@ body {
     color: #ffffff;
     border-radius: 5px 5px 0 0 ;
     cursor: pointer;
-    user-select: none;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 .footer .info-title-bottom:hover{
   background-color: rgba(69, 53, 78, 0.5);
@@ -541,11 +561,12 @@ body {
   border-bottom: 1px solid #56515f;
 }
 .footer .info-title-bottom .feather{
-   width: 20px;
-   height: 20px;
-   margin-top: -2px;
+   width: 25px;
+   height: 25px;
    vertical-align: middle;
    transition: all 0.2s ease-in-out;
+   pointer-events: none;
+   margin-left: 3px;
 }
 .fe-rotate{
   transform: rotate(45deg);
@@ -557,9 +578,10 @@ body {
     height: 30px;
     overflow: hidden;
     transition: all 50ms ease-out;
+    margin-bottom: 5px;
 }
 .height80{
-  height: 80px !important;
+  height: auto !important;
 }
 
  .badge{
@@ -571,24 +593,26 @@ body {
 }
 .badge:hover{
     text-decoration: none;
+    background-image: linear-gradient(rgba(73, 19, 180, 0.153), rgba(73, 19, 180, 0.153));
 }
 .badge:focus{
-    outline: 3px solid #4913b4 !important;
+    outline: 3px solid #4913b4;
 }
 
 
-.back-to-top{
-    position: fixed;
-    bottom: 50px;
-    right: 40px;
-    z-index: 1;
+.help-form{
+  position: fixed;
+  bottom: 50px;
+  right: 40px;
+  z-index: 1;
+  transition: all 0.2s ease-in-out;
 }
-.back-to-top a{
+.help-form a{
     width: 50px;
     height: 50px;
-    background-color: #4211a3;
-    background-color: #4913b4e8;
-    border: 1px solid #5419c9;
+    background-color: #011e34;
+    background-color: #011e34e1;
+    border: 1px solid #2a1226;
     color: #faf7fc;
     display: flex;
     justify-content: center;
@@ -596,13 +620,131 @@ body {
     border-radius: 100%;
     text-decoration: none;
     transition: all 0.1s ease-in;
+    box-shadow: 1px 1px 6px -2px black;
 }
-.back-to-top a:hover{
-    background-color: #591cd3;
+.help-form a:hover{
+    background-color: #00111d;
 }
 
 
+/* chat form starts here */
+.chat{
+  width: 400px;
+  height: 450px;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 10px;
+  top: 20px;
+  right: 100px;
+  z-index: 3;
+  overflow: hidden;
+  background-image: url("../assets/images/headersvg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.chat .chat-header{
+  background-color: #d33f74;
+  background-image: linear-gradient(to bottom right, #be3666,#c43467,#a72653);
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.chat .chat-header .chat-title{
+  font-size: 18px;
+  width: 100%;
+  padding: 5px 10px;
+}
+.chat-header .close-chat svg{
+  border-radius: 50px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: transparent;
+  height: 30px;
+  width: 30px;
+  padding: 2px;
+}
+.chat-header .close-chat svg:hover{
+  background-color: #f5749d;
+}
+.chat .chat-body{
+  height: 100%;
+  padding: 5px;
+}
+.chat .chat-body *{
+  display: block;
+  border-radius: 5px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
 
+}
+.chat .chat-body label{
+  color: #b9b9b9;
+  font-size: 14px;
+  height: 20px;
+  margin-left: 2px;
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+
+}
+
+.chat .chat-body .message{
+  height: 250px;
+  width: 100%;
+  padding: 5px;
+  resize: none;
+}
+.message::-webkit-scrollbar{
+  width: 5px;
+}
+.message::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.message::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+}
+.message::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+.chat .name, .chat .email{
+  height: 40px;
+  border: 1px solid black;
+  padding: 5px 10px;
+  margin-bottom: 2px;
+}
+.focus-w-outline:focus-within{
+  outline: 3px solid #81d2f1 !important;
+}
+.chat-body .submit{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  outline: none;
+  border: 1px solid #013138;
+  outline: 3px solid transparent;
+  background-color: #036774;
+  color: white;
+  cursor: pointer;
+
+}
+.chat-body .submit:hover{
+  background-color: #024b55;
+}
+.chat-body .submit svg{
+  margin-left: -1px;
+}
 
 
 
@@ -696,9 +838,40 @@ body {
   border-radius: 20px;
 }
 
+.footer .section-team{
+  height: 55px;
 
+}
 
+.footer .info-title-bottom{
+  min-height: 55px;
+  
+}
 
+.chat{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  border-radius: 0;
+}
+.chat .chat-body label{
+  font-size: 16px;
+  margin: 2px;
+}
+.chat .name, .chat .email{
+  font-size: 18px;
+}
+.chat .chat-body .message{
+  height: 350px;
+  font-size: 18px;
+}
+.chat-header .close-chat svg{
+  height: 40px;
+  width: 40px;
+  border-radius: 0;
+}
 
 }
 
